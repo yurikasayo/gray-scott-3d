@@ -19,6 +19,7 @@ export class Display {
             projectionMatrix: 'mat4',
             map: 'sampler3D',
             size: 'vec3',
+            raySteps: 'float',
         });
 
         this.camera = new Camera();
@@ -28,6 +29,7 @@ export class Display {
         this.rotation = {dtheta: 0, dphi: 0, decay: 0.95};
 
         this.param = {
+            raySteps: 200.0
         };
     }
 
@@ -51,6 +53,7 @@ export class Display {
         const uniforms = {
             map: this.texture,
             size: [1, 1, 1],
+            raySteps: this.param.raySteps,
         }
         this.renderer.set(this.displayCube, this.shader, uniforms, this.camera, true);
         this.renderer.render({

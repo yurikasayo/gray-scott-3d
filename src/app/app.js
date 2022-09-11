@@ -112,7 +112,8 @@ export class MyApp {
         this.gui.add(this.simulator.param, "D2").min(0.05).max(0.15).step(0.001);
         this.gui.add(this.simulator.param, "f").min(0.025).max(0.055).step(0.0001);
         this.gui.add(this.simulator.param, "k").min(0.05).max(0.08).step(0.0001);
-        this.gui.add(this.simulator.param, "steps").min(1).max(20).step(1);
+        this.gui.add(this.simulator.param, "steps").min(1).max(50).step(1);
+        this.gui.add(this.display.param, "raySteps").min(200).max(1000).step(10);
         this.gui.add(this.simulator.param, "reset");
     }
 

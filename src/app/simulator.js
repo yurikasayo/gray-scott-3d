@@ -42,7 +42,7 @@ export class Simulator {
             D2: 0.08,
             f: 0.04,
             k: 0.06,
-            steps: 3,
+            steps: 1,
             sourceSize: 0.0005,
             reset() {
                 that.reset();
