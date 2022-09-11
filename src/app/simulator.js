@@ -42,6 +42,7 @@ export class Simulator {
             D2: 0.08,
             f: 0.04,
             k: 0.06,
+            steps: 3,
             sourceSize: 0.0005,
             reset() {
                 that.reset();
@@ -75,7 +76,7 @@ export class Simulator {
     }
 
     simulate() {
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < this.param.steps; i++) {
             const uniforms = {
                 map: this.source.texture,
                 D: [this.param.D1, this.param.D2],
